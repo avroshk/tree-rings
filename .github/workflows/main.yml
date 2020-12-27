@@ -28,10 +28,15 @@ jobs:
         uses: actions/setup-node@v2.1.4
       - name: Install yarn
         run: yarn
-
-      # Runs a single command using the runners shell
       - name: Build webpage
         run: |
           echo GITHUB_WOKSPACE=$GITHUB_WORKSPACE
           yarn build
           echo Great success!
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.SECRET_GITHUB_TOKEN }}
+          author_email: avroshkumar@gmail.com
+          author_name: avroshk
+          message: autopublish $GITHUB_RUN_NUMBER
