@@ -7,8 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,6 +22,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
       - name: Install yarn
@@ -33,10 +33,11 @@ jobs:
           echo GITHUB_WOKSPACE=$GITHUB_WORKSPACE
           yarn build
           echo Great success!
+          echo GITHUB_RUN_NUMBER=$GITHUB_RUN_NUMBER
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.SECRET_GITHUB_TOKEN }}
           author_email: avroshkumar@gmail.com
           author_name: avroshk
-          message: autopublish $GITHUB_RUN_NUMBER
+          message: "autopublish $GITHUB_RUN_NUMBER"
