@@ -22,10 +22,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
+      - name: Setup Git
+        run: git config user.name "avroshk" && git config user.email "avroshkumar@gmail.com"
       - name: Install yarn
         run: yarn
       - name: Build webpage
@@ -34,10 +34,5 @@ jobs:
           yarn build
           echo Great success!
           echo GITHUB_RUN_NUMBER=$GITHUB_RUN_NUMBER
-      - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.SECRET_GITHUB_TOKEN }}
-          author_email: avroshkumar@gmail.com
-          author_name: avroshk
-          message: "autopublish $GITHUB_RUN_NUMBER"
+      env:
+        GH_TOKEN: ${{secrets.SECRET_GITHUB_TOKEN}}

@@ -20,7 +20,8 @@
   },
   "scripts": {
     "start": "BROWSER='firefox' react-scripts start",
-    "build": "rm -rf docs; react-scripts build; mv build docs",
+    "build": "react-scripts build",
+    "publish": "gh-pages -d build -r `https://$GH_TOKEN@github.com/avroshk/tree-rings.git`",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
