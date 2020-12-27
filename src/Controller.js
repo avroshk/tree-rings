@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import Slider from 'rc-slider';
 import SVGRenderer from './SVGRenderer';
@@ -16,7 +16,7 @@ const Controls = styled.section`
   font-size: 10px;
 `;
 
-export default Controller => {
+const Controller = () => {
   const [loop, _loop] = useState(0);
   const [numRings, _numRings] = useState(5);
   const [cx, _cx] = useState(300);
@@ -149,10 +149,12 @@ export default Controller => {
       r1={r1}
       r2={r2}
       dr1={dr1}
-      dr1={dr2}
+      dr2={dr2}
       numRings={numRings}
       scale={scale}
       numOctaves={numOctaves}
       baseFreq={baseFreq} />
   ]);
 }
+
+export default Controller;

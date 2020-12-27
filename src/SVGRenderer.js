@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useSpring, animated } from 'react-spring';
-import { Spring, config } from 'react-spring/renderprops';
+import React, { useState } from 'react';
+import { Spring } from 'react-spring/renderprops';
 import SVGCircle from './SVGCircle';
 
 // variable for the namespace
@@ -26,7 +25,6 @@ const SVGRenderer = ({
   return (
     <div onClick={() => { setFilterId(filterId > 0 ? 0 : filterId+1);} }>
       <Spring
-        config={config.slow}
         reset={reset}
         reverse={direction}
         from={{ dr: dr1, cx: cx, cy: cy, r: r1, scale: scale1, baseFreq: baseFreq1, numOctaves: numOctaves1  }}
