@@ -24,7 +24,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.1.4
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+      - name: Install yarn
+        run: yarn
 
       # Runs a single command using the runners shell
       - name: Build webpage
@@ -32,5 +35,3 @@ jobs:
           echo GITHUB_WOKSPACE=$GITHUB_WORKSPACE
           yarn build
           echo Great success!
-          #git commit -m "New build"
-          #git push
