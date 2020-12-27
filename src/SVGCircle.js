@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SVGCircle = ({cx, cy, r, filter, strokeWidth = 1, stroke = "#DA251D"}) => {
+const SVGCircle = ({cx, cy, r, filter, strokeWidth = 1, stroke = "#DA251D", pathLength = 100}) => {
   return (
     <circle
       style={{"filter": `url(#${filter})`}}
@@ -9,6 +9,7 @@ const SVGCircle = ({cx, cy, r, filter, strokeWidth = 1, stroke = "#DA251D"}) => 
       cx={cx}
       cy={cy}
       r={r}
+      pathLength={pathLength}
       fill="none"
     />
   );
