@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tree-rings/static/css/main.d55d4cbc.chunk.css",
+    "main.js": "/tree-rings/static/js/main.c93521d8.chunk.js",
+    "main.js.map": "/tree-rings/static/js/main.c93521d8.chunk.js.map",
+    "runtime-main.js": "/tree-rings/static/js/runtime-main.8bda2eb1.js",
+    "runtime-main.js.map": "/tree-rings/static/js/runtime-main.8bda2eb1.js.map",
+    "static/css/2.7fe95f8e.chunk.css": "/tree-rings/static/css/2.7fe95f8e.chunk.css",
+    "static/js/2.7b0fdae6.chunk.js": "/tree-rings/static/js/2.7b0fdae6.chunk.js",
+    "static/js/2.7b0fdae6.chunk.js.map": "/tree-rings/static/js/2.7b0fdae6.chunk.js.map",
+    "static/js/3.c4c1c935.chunk.js": "/tree-rings/static/js/3.c4c1c935.chunk.js",
+    "static/js/3.c4c1c935.chunk.js.map": "/tree-rings/static/js/3.c4c1c935.chunk.js.map",
+    "index.html": "/tree-rings/index.html",
+    "static/css/2.7fe95f8e.chunk.css.map": "/tree-rings/static/css/2.7fe95f8e.chunk.css.map",
+    "static/css/main.d55d4cbc.chunk.css.map": "/tree-rings/static/css/main.d55d4cbc.chunk.css.map",
+    "static/js/2.7b0fdae6.chunk.js.LICENSE.txt": "/tree-rings/static/js/2.7b0fdae6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8bda2eb1.js",
+    "static/css/2.7fe95f8e.chunk.css",
+    "static/js/2.7b0fdae6.chunk.js",
+    "static/css/main.d55d4cbc.chunk.css",
+    "static/js/main.c93521d8.chunk.js"
+  ]
+}
