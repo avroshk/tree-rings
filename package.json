@@ -22,7 +22,7 @@
   "scripts": {
     "start": "BROWSER='firefox' react-scripts start",
     "build": "react-scripts build",
-    "deploy": "gh-pages -d build -r \"https://$GH_TOKEN@github.com/avroshk/tree-rings.git\" -m \"autopublish:GITHUB_RUN_NUMBER\"",
+    "deploy": "gh-pages -d build -r \"https://$GH_TOKEN@github.com/avroshk/tree-rings.git\" -m \"autopublish:$GITHUB_RUN_NUMBER\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
