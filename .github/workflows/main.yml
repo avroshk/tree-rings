@@ -34,5 +34,6 @@ jobs:
           yarn build
           echo Great success!
           echo GITHUB_RUN_NUMBER=$GITHUB_RUN_NUMBER
+          yarn publish
       env:
         GH_TOKEN: ${{secrets.SECRET_GITHUB_TOKEN}}
